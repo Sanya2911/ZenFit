@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap");
+
+:root {
+    --border-color: #144fc6;
+    --fill-color: #6ab3f8;
+    --background-gradient: linear-gradient(
+        90deg,
+        hsla(33, 100%, 53%, 1) 0%,
+        hsla(58, 100%, 68%, 1) 100%
+    );
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: var(--background-gradient);
+    background-size: cover;
+    background-position: center;
+    color: #1a1a1a; /* Darker text color */
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Make sure the body covers the full viewport height */
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#in {
+    margin-left:450px;
+    margin-right: 10px; 
+    /* Optional: Add some spacing between the input and button */
+  }
+
+h1 {
+    margin: 30px 0 0; /* Increased margin */
+    font-size: 48px; /* Increased font size */
+    font-weight: bold; /* Bolder text */
+    color: #1a1a1a; /* Darker text color */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Increased letter spacing */
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 24px; /* Increased font size */
+}
+
+.cup {
+    background-color: #fff;
+    border: 4px solid var(--border-color);
+    color: var(--border-color);
+    border-radius: 0 0 40px 40px;
+    height: 330px;
+    width: 150px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cup.cup-small {
+    height: 120px; /* Increased height */
+    width: 60px; /* Increased width */
+    border-radius: 0 0 15px 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Bolder text */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+.cup.cup-small.full {
+    background-color: var(--fill-color);
+    color: #fff;
+}
+
+.cups {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 400px; /* Increased width */
+}
+
+.remained {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    transition: 0.3s ease;
+}
+
+.remained span {
+    font-size: 30px; /* Increased font size */
+    font-weight: bold;
+}
+
+.remained small {
+    font-size: 18px; /* Increased font size */
+}
+
+.percentage {
+    background-color: var(--fill-color);
+    display: flex;
+    align-items: center;
+    justify-content: last baseline;
+    font-weight: last baseline;
+    font-size: 50px; /* Increased font size */
+    height: 0;
+    transition: 0.3s ease;
+}
+
+.text {
+    text-align: center;
+    margin: 0 0 30px; /* Increased margin */
+    font-size: 24px; /* Increased font size */
+    font-weight: bold; /* Bolder text */
+}
+
+#water-tracker {
+    text-align: center;
+  }
+
+  .cup {
+    display: flex;
+    justify-content: center;  }
+
+  .cups {
+    justify-content: center;
+  }
+
+  .cup-small {
+    justify-content: center;  }
+
+    /* style.css */
+
+/* Add a custom style for the container buttons */
+.container-button {
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #f8a306;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.container-button:hover {
+    background-color: #fffb04;
+}
+
+/* Add specific styles for each section */
+#daily-container,
+#blogs-container,
+#chatroom-container {
+    margin: 20px 0;
+}

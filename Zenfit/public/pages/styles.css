@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: "Poppins", sans-serif;
+  background: url("./assets/background.jpg") center/cover no-repeat;
+}
+
+.container {
+  width: 100%;
+  background: hsla(33, 100%, 53%, 1);
+  background: linear-gradient(
+      90deg,
+      hsla(33, 100%, 53%, 1) 0%,
+      hsla(58, 100%, 68%, 1) 100%
+  );
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  size-adjust: auto;
+  margin-right: 10px; /* Add margin between containers */
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-weight: 900;
+  font-style: italic;
+  transform: skewX(+30deg);
+}
+
+.wrapper {
+  width: 80%;
+  margin-bottom: 20px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.wrapper .title {
+  background: hsla(33, 100%, 53%, 1);
+  background: linear-gradient(
+      90deg,
+      hsla(33, 100%, 53%, 1) 0%,
+      hsla(58, 100%, 68%, 1) 100%
+  );
+  color: white;
+  line-height: 2.5;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.wrapper .box {
+  border: 1px solid #efefef;
+  padding: 10px 15px;
+  min-height: 400px;
+  max-height: 400px;
+}
+
+.wrapper .box .item {
+  display: flex;
+  float: left;
+  margin: 10px 0;
+}
+
+.wrapper .box .item .icon {
+  background: #ff930f;
+  color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.wrapper .box .item .msg {
+  background: #ff930f;
+  color: white;
+  border-radius: 10px;
+  width: 500px;
+  margin-left: 10px;
+}
+
+.wrapper .box .item .msg p {
+  padding: 10px;
+}
+
+.wrapper .box .item.right {
+  float: right;
+}
+
+.wrapper .box .item.right .msg {
+  background: #efefef;
+  color: #333;
+}
+
+.wrapper .typing-area {
+  width: 100%;
+  background: #efefef;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.wrapper .typing-area .input-field {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .typing-area .input-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  outline: none;
+  padding-right: 70px;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s all ease;
+}
+
+.wrapper .typing-area .input-field input:focus {
+  border-color: #007bff;
+}
+
+.wrapper .typing-area .input-field button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 1px solid #007bff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: #007bff;
+  outline: none;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s all ease;
+}
+
+.wrapper .typing-area .input-field button:hover {
+  background: #007bff;
+  color: white;
+}
+
+.wrapper .typing-area .input-field input:valid ~ button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #ff930f;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.8); /* Add some transparency to the navbar background */
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+
+.container h2 {
+  color: #333;
+}
+
+.container p {
+  color: #555;
+}
+
+/* Add styles for the animated images or content here */
+.animated-image {
+  width: 100%; /* Adjust the width as needed */
+  max-width: 400px; /* Set a maximum width for the images */
+  height: auto;
+  animation: fadeInUp 1s ease-in-out;
+}

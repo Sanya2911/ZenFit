@@ -1,0 +1,158 @@
+@import "../../assets/colors.scss";
+
+.Settings {
+  margin-top: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: calc(100% - 64px);
+  // padding-top: 25px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 10px;
+  position: relative;
+}
+
+.SideMenu {
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  .Title {
+    padding: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h2 {
+      background: main-gradient(45deg);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .Logo {
+      width: 35px;
+      height: 35px;
+      background-image: $gradient-back;
+      background-size: cover;
+      border-radius: 5px;
+      display: grid;
+      place-items: center;
+      * {
+        opacity: 0.74;
+      }
+    }
+  }
+
+  .SettingLinks {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .SideLink {
+    width: 100%;
+    text-decoration: none;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .SelectedSideLink {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.SettingsPage {
+  // height: 100%;
+  overflow-y: auto;
+  flex: 1;
+  padding: 25px;
+  padding-bottom: 50px;
+
+  &::-webkit-scrollbar {
+    width: 5px !important;
+    // padding: 2.5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 50px !important;
+    // padding: 2.5px;
+    // margin: 40px;
+    width: 5px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-radius: 50px !important;
+    width: 5px !important;
+    // border-right: 5px rgba(255, 255, 255, 0.25) solid;
+    background-clip: padding-box !important;
+  }
+}
+
+.OptionsBtn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+@media screen and (max-width: 864px) {
+  .Settings {
+    flex-direction: column;
+  }
+
+  .SideMenu {
+    // flex-direction: row;
+    width: 100%;
+    height: fit-content;
+
+    .SettingLinks {
+      display: flex;
+      flex-direction: row;
+
+      .SideLink {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        flex-direction: column;
+        height: fit-content;
+        padding: 10px;
+        span {
+          //   display: none;
+          font-weight: 300;
+          font-size: 10px;
+        }
+
+        &:nth-last-child(1) {
+          border-right: none;
+        }
+      }
+
+      .SelectedSideLink {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

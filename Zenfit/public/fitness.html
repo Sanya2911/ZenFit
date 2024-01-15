@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Center</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="pages/styles.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(
+                90deg,
+                hsla(33, 100%, 53%, 1) 0%,
+                hsla(58, 100%, 68%, 1) 100%
+            );
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                90deg,
+                hsla(33, 100%, 53%, 1) 0%,
+                hsla(58, 100%, 68%, 1) 100%
+            );
+            color: white;
+            margin-right: 10px;
+        }
+
+        .animated-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-weight: 900;
+            font-style: italic;
+            transform: skewX(+30deg);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Fitness Center</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#yourAiBuddy">Your AI Buddy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#workoutMonitoring">Workout Session Monitoring</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#musicPlaylist">AI Generated Music Playlist</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#coachingPlatform">AI Based Coaching Platform</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-container mt-5 d-flex flex-row">
+    <div id="yourAiBuddy" class="container" style="color: black;">
+        <h2><a href="ai.html">Your AI Buddy</a></h2>
+        <img src="https://miro.medium.com/v2/resize:fit:1000/1*uhOoBZcdW7hXWn53tuZxvw.png" alt="Your AI Buddy" class="animated-image">
+    </div>
+
+    <div id="workoutMonitoring" class="container">
+        <h2><a href="https://0raghvendrasharma.github.io/workout-monitoring/workout%20tutorial/index1.html">Workout Session Monitoring</a></h2>
+        <img src="https://www.ideafit.com/wp-content/uploads/files/shutterstock_38146159-1024x686.jpg" alt="Workout Session Monitoring" class="animated-image">
+    </div>
+
+    <div id="musicPlaylist" class="container">
+        <h2><a href="https://music.youtube.com/playlist?list=PL3VA4sApOHxXImSs_fZFCrD1rQbH_LbGG&si=cLgJ_Dqq3wzHz3vF">AI Generated Music Playlist</a></h2>
+        <!-- Content for AI Generated Music Playlist goes here -->
+        <img src="https://www.playlistai.app/icon.png?73729feaaad22a13" alt="AI Generated Music Playlist" class="animated-image">
+    </div>
+
+    <div id="coachingPlatform" class="container">
+        <h2>AI Based Coaching Platform</h2>
+        <!-- Content for AI Based Coaching Platform goes here -->
+        <img src="https://elearningindustry.com/wp-content/uploads/2023/08/f6b596de7973591b66bf5a8fccb7c838.png" alt="AI Based Coaching Platform" class="animated-image">
+    </div>
+</div>
+
+</body>
+</html>
